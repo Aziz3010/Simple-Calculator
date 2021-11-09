@@ -85,7 +85,6 @@ equal_btn.addEventListener("click",(e)=>{
     dis1Num = '';
 });
 
-
 // clear all fields 
 all_clear.addEventListener("click",(e)=>{
     historyScreen.innerText = '0';
@@ -103,13 +102,71 @@ last_entity_clear.addEventListener("click",(e)=>{
 });
 
 
+// use keyboard
+window.addEventListener("keydown",(e)=>{
+    if(
+        e.key === "0" ||
+        e.key === "1" ||
+        e.key === "2" ||
+        e.key === "3" ||
+        e.key === "4" ||
+        e.key === "5" ||
+        e.key === "6" ||
+        e.key === "7" ||
+        e.key === "8" ||
+        e.key === "9" ||
+        e.key === "."
+    ){
+        clickNumberElm(e.key)
+    } else if(
+        e.key === "+" ||
+        e.key === "-" ||
+        e.key === "/" ||
+        e.key === "%"
+    ){
+        clickOperationElm(e.key);
+    } else if ( e.key === "*" ) {
+        clickOperationElm('x');
+    } else if ( e.key == "Enter" || e.key == "=" ) {
+        clickEqualBtnElm();
+    } else if ( e.key == "Escape" ) {
+        clickAllClearElm();
+    } else if ( e.key == "Backspace" ) {
+        clicklastEntityClearElm();
+    }
 
+});
 
+function clickNumberElm(key){
+    number.forEach( Button => {
+        if( Button.innerText === key ){
+            Button.click();
+        }
+    } )
+}
 
+function clickOperationElm(key){
+    operation.forEach( Button => {
+        if( Button.innerText === key ){
+            Button.click();
+        }
+    } )
+}
 
+// enter ===> click on equal_btn
+function clickEqualBtnElm(){
+    equal_btn.click();
+}
 
+// Escape ===> click on all_clear
+function clickAllClearElm(){
+    all_clear.click();
+}
 
-
+// Backspace ===> click on last_entity_clear
+function clicklastEntityClearElm(){
+    last_entity_clear.click();
+}
 
 
 
