@@ -1,33 +1,110 @@
-body {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+    background-color: rgb(18, 26, 31);
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f2f2f2;
-    padding: 0 .8rem;
 }
 
-.mainClass {
-    background-color: blueviolet;
-    width: 400px;
+.calculator {
+    width: 90%;
+    max-width: 400px;
+    background-color: rgb(39, 55, 59);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* Media Query */
-
-/* @media screen and (max-width: 992px) {
-    .mainClass {
-        background-color: brown;
-        width: 50%;
-    }
+/* top section */
+.screen-display {
+    background-color: rgb(182, 182, 182);
+    height: 100px;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 30px;
+    position: relative;
 }
 
-@media screen and (max-width: 768px) {
-    .mainClass {
-        background-color: green;
-    }   
+.history {
+    font-size: 20px;
+    opacity: .4;
+    height: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-@media screen and (max-width: 576px) {
-    .mainClass {
-        background-color: blue;
-    }   
-} */
+.working-area {
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.temp-result {
+    position: absolute;
+    bottom: 10;
+    left: 10;
+    font-size: 20px;
+    opacity: .4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* buttom section */
+
+.all-buttons {
+    color: whitesmoke;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+}
+
+.button {
+    height: 80px;
+    border: .5px solid rgba(92, 92, 92, .137);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.button:hover {
+    background-color: rgb(30, 43, 46);
+}
+
+.zero {
+    grid-column: 1/3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
