@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 0 .8rem;
+}
+
+.mainClass {
+    background-color: blueviolet;
+    width: 400px;
+}
+
+/* Media Query */
+
+/* @media screen and (max-width: 992px) {
+    .mainClass {
+        background-color: brown;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mainClass {
+        background-color: green;
+    }   
+}
+
+@media screen and (max-width: 576px) {
+    .mainClass {
+        background-color: blue;
+    }   
+} */
